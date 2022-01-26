@@ -1,46 +1,36 @@
-# Getting Started with Create React App
+# TypeScript vs JavaScript
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> Disclaimer: I am a fan of TypeScript. My purpose here is to persuade you to feel the same. Or to at least be more open to it.
 
-## Available Scripts
+## UBIQUITY
 
-In the project directory, you can run:
+Javascript is the language of the web. It is hugely ubiquitous. No doubt about that. However, TypeScript's popularity is on the rise.
 
-### `npm start`
+Some popular npm packages are written using TypeScript:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [MUI](https://github.com/mui-org/material-ui)
+- [React Router](https://github.com/remix-run/react-router)
+- [Redux](https://github.com/reduxjs/redux)
+- [Redux Toolkit](https://github.com/reduxjs/redux-toolkit)
+- [Remix](https://github.com/remix-run/remix)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## WHY?
 
-### `npm test`
+I won't go into depth about the benefits of TypeScript, but here is my quick pitch:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- TypeScript makes code more understandable
+- TypeScript makes it easier to refactor
+- TypeScript really isn't that difficult, even for beginner developers
 
-### `npm run build`
+## THIS SAMPLE
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The repo provides a simple sample meant to demonstrate the benefits listed above. It is a simple app. It displays a default user and allows you to make modifications to the user.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The **main** branch has the TypeScript version, while the **as-js** branch has the same app using plain old JavaScript. In fact, the JavaScript version was created by simply changing all of the file extensions to `.js` and removing any type information. Just switch between the two branches to see the differences and work with both.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## EXERCISE
 
-### `npm run eject`
+When in the Javascript version
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. look for the user object and the property `username`. Rename it to `userName`. How difficult was that to get it working? Did you change it in all of the places?
+2. where did `user.info.bar` come from? Is it a string, number, or boolean? Perhaps an object?

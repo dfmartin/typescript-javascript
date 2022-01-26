@@ -30,6 +30,9 @@ export const User = () => {
         <span>username: {user.username}</span>
         <span>isActive: {user.isActive ? 'yes' : 'no'}</span>
         <span>roles: {user.roles.join(', ')}</span>
+        <span>
+          foo: {!!user.info.bar ? user.info.foo : user.info.foo + ' ALERT!'}
+        </span>
       </div>
       <div>
         <input
