@@ -4,7 +4,7 @@ import { actions } from './state'
 import '../App.css'
 
 export const User = () => {
-  const roleRef = React.useRef<HTMLInputElement | null>(null)
+  const roleRef = React.useRef()
   const user = useAppSelector(state => state.user)
   const dispatch = useAppDispatch()
   const [typedUsername, setTypedUsername] = React.useState(user?.username || '')
@@ -26,6 +26,7 @@ export const User = () => {
 
   return (
     <div>
+      <h1>Javascript User</h1>
       <div className='userDisplay'>
         <span>username: {user.username}</span>
         <span>isActive: {user.isActive ? 'yes' : 'no'}</span>

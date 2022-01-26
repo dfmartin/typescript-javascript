@@ -1,12 +1,6 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 
-export interface User {
-  username: string
-  isActive: boolean
-  roles: string[]
-}
-
-const initialState: User = {
+const initialState = {
   username: '',
   isActive: false,
   roles: [],
@@ -25,13 +19,13 @@ export const userSlice = createSlice({
     toggleActive: state => {
       state.isActive = !state.isActive
     },
-    setName: (state, action: PayloadAction<string>) => {
-      state.username = action.payload
+    setName: (state, action) => {
+      state.userName = action.payload
     },
-    setRoles: (state, action: PayloadAction<string[]>) => {
+    setRoles: (state, action) => {
       state.roles = action.payload
     },
-    addRole: (state, action: PayloadAction<string>) => {
+    addRole: (state, action) => {
       if (
         action.payload.trim().length > 0 &&
         !state.roles.includes(action.payload)
