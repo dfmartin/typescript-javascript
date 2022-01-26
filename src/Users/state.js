@@ -4,6 +4,9 @@ const initialState = {
   username: '',
   isActive: false,
   roles: [],
+  info: {
+    foo: 0,
+  },
 }
 
 export const userSlice = createSlice({
