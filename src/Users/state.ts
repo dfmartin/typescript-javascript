@@ -4,12 +4,17 @@ export interface User {
   username: string
   isActive: boolean
   roles: string[]
+  info: {
+    foo: number
+    bar?: boolean
+  }
 }
 
 const initialState: User = {
   username: '',
   isActive: false,
   roles: [],
+  info: { foo: 0, bar: undefined },
 }
 
 export const userSlice = createSlice({
